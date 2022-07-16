@@ -1,46 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
-/* VARIABLES */
-
-:root{
-  /* --main-text-color : #fff; */
-  /* --main-bg-color : #fff; */
-  /* --main-font-size : 16px; */
-  /* --main-font-weight : 400; */
-  /* --main-line-height : 1.5; */
-}
-
 /* GENERAL */
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 *,
 *::before,
 *::after{
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
-
-
 html{
   height: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-
 img{
   display: block;
   height: auto;
 }
-
 body{
   font-family: "Poppins", "Arial", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   margin: 0;
   padding: 0;
 }
-
 /* VISUALLY-HIDDEN */
 
 .visually-hidden {
@@ -51,13 +44,13 @@ body{
   padding: 0;
   border: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 /* CONTAINER */
-
 .container{
   max-width: 1150px; 
   margin-right: auto;
@@ -67,22 +60,33 @@ body{
 }
 
 /* STICKY-FOOTER */
-
 .site-main{
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .site-header-wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .site-header-innere{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .logo{
   padding: 55px 30px 0 0 ;
 }
 .sitenav-list{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   margin: 0;
@@ -182,6 +186,8 @@ body{
   padding: 30px 64px;
 }
 .invalid{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-style: italic;
   padding-top: 8px;
@@ -204,11 +210,35 @@ body{
   padding: 14px 32px;
   border: 3px solid transparent;
 }
+.input-url:not(:-moz-placeholder-shown):not(:focus):invalid ~ .invalid{
+  opacity: 1;
+}
+.input-url:not(:-ms-input-placeholder):not(:focus):invalid ~ .invalid{
+  opacity: 1;
+}
 .input-url:not(:placeholder-shown):not(:focus):invalid ~ .invalid{
   opacity: 1;
 }
+.input-url:not(:-moz-placeholder-shown):not(:focus):invalid{
+  border: 3px solid #F46363;
+}
+.input-url:not(:-ms-input-placeholder):not(:focus):invalid{
+  border: 3px solid #F46363;
+}
 .input-url:not(:placeholder-shown):not(:focus):invalid{
   border: 3px solid #F46363;
+}
+.input-url::-webkit-input-placeholder{
+  background-color: #fff;
+}
+.input-url::-moz-placeholder{
+  background-color: #fff;
+}
+.input-url:-ms-input-placeholder{
+  background-color: #fff;
+}
+.input-url::-ms-input-placeholder{
+  background-color: #fff;
 }
 .input-url::placeholder{
   background-color: #fff;
@@ -248,9 +278,15 @@ body{
   margin-left: auto;
   margin-right: auto;
   padding-top: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   
 }
 .text-wrapper p{
@@ -263,8 +299,12 @@ body{
   color: #9E9AA8;
 }
 .statistics-list{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 1110px;
   background-image: url("../images/Rectangle.png");
   background-position: left center;
@@ -380,6 +420,8 @@ footer{
   background: #232127;
 }
 .footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .footer-logo {
@@ -417,6 +459,8 @@ footer{
 }
 .social-list {
   padding-top: 73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
